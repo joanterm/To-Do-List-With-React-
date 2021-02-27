@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(122, 122, 150);
+}
+
+.todo-list {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 50%;
+    border-bottom: 1px solid #9a85d3;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: #333333;
+}
+
+input[type=checkbox]{
+    margin-right: 30px;
+    font-size: 30px;
+}
+
+input[type=checkbox]:focus {
+    outline: 0;
+}
+
