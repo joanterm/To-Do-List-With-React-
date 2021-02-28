@@ -1,11 +1,12 @@
 import React from "react"
 
 
-const TodoItem = () => {
+const TodoItem = (props) => { 
     return (
         <div className="todo-item">
-            <input type="checkbox" />
-            <p className="input-style">Placeholder text here</p>
+            {/* the below code will ensure that once the box is checked, it will be marked as completed and cannot be unchecked */}
+            <input type="checkbox"checked={props.completed}/> 
+            <p className="input-style">{props.dataText}</p>
         </div>
 
     )
