@@ -1,8 +1,8 @@
 import React from "react"
 import './App.css';
 //imported components:
-import TodoItem from './components/TodoItem.js'
-import todoData from './components/TodoData.js'
+import TodoItem from './components/TodoItem'
+import todoData from './components/TodoData'
 
 
 // const App = () => {
@@ -21,9 +21,27 @@ class App extends React.Component {
     this.state = {
       todos: todoData
     }
+    this.handleChange = this.handleChange.bind(this)
   }
+  handleChange(id) {
+    this.setState(prevState => {
+      const updatedTodos = prevState.todos.map(todo => {
+        if (todo.id === id) {
+          return {
+            ...todo, 
+            completed: !todo.completed
+          }
+        }
+        return todo
+      })
+      return {
+        todos: updatedTodos
+      }
+    })    
+  }
+
   render() {
-    const todoComponents = this.state.todos.map(item => <TodoItem key={item.id} completed={item.completed} dataText={item.text}/>)
+    const todoComponents = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
     return(
       <div className="todo-list">
         {todoComponents}
