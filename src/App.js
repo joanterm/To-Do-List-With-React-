@@ -1,20 +1,9 @@
 import React from "react"
 import './App.css';
-//imported components:
+//Imported components:
 import TodoItem from './components/TodoItem'
 import todoData from './components/TodoData'
 
-
-// const App = () => {
-
-//   const todoComponents = todoData.map(item => <TodoItem key={item.id} completed={item.completed} dataText={item.text}/>)
-
-//   return(
-    // <div className="todo-list">
-    //   {todoComponents}
-    // </div>
-//   )
-// }
 class App extends React.Component {
   constructor() {
     super()
@@ -41,9 +30,11 @@ class App extends React.Component {
   }
 
   render() {
+    
     const todoComponents = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
     return(
       <div className="todo-list">
+        <h1 className="name">Joanna's To Do List:</h1>
         {todoComponents}
       </div>
     )

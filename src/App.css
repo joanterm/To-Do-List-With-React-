@@ -5,23 +5,23 @@ body {
 .todo-list {
     background-color: rgb(255, 255, 255);
     margin: auto;
-    width: 50%;
+    margin-top: 40px;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
 }
 
 .todo-item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: 50%;
     border-bottom: 1px solid #9a85d3;
     font-family: Roboto, sans-serif;
-    font-weight: 100;
-    font-size: 15px;
+    font-size: 20px;
     color: #333333;
 }
 
@@ -32,5 +32,13 @@ input[type=checkbox]{
 
 input[type=checkbox]:focus {
     outline: 0;
+}
+
+
+
+.name {
+    font-family: Roboto, sans-serif;
+    color:rgb(122, 122, 150);
+    text-transform: uppercase;
 }
 
